@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ms-teams-notifier: wasikuss/ms-teams-notifier@dev:875b973125c2abbb3fd880db6f45fa277066afdd
+  ms-teams-notifier: wasikuss/ms-teams-notifier@dev:b985d3bfe2906791bf60ee65a9d42ff46937dde6
 
 jobs:
   build:
