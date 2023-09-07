@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ms-teams-notifier: wasikuss/ms-teams-notifier@dev:1b6e31f381d6a67c24f2b799bb2691c84fb61ce1
+  ms-teams-notifier: wasikuss/ms-teams-notifier@dev:2e60f8c6618bff0afba071302fdbde62f5132125
 
 jobs:
   build:
@@ -17,6 +17,11 @@ jobs:
           name: fail
           command: |
             exit 1
+      - run:
+          when: on_fail
+          name: fail
+          command: |
+            echo $WEBHOOK_URL
       - ms-teams-notifier/report:
           only_on_fail: true
           webhook_url: $WEBHOOK_URL
