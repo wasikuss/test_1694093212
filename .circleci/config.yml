@@ -13,12 +13,16 @@ jobs:
           name: Do something
           command: |
             echo 1
+        - run:
+          name: fail
+          command: |
+            exit 1
       - ms-teams-notifier/report:
           only_on_fail: true
           webhook_url: $WEBHOOK_URL
 
 workflows:
-  build:
+  do-build:
     jobs:
       - build
 
