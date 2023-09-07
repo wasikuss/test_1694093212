@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ms-teams-notifier: wasikuss/ms-teams-notifier@dev:2e60f8c6618bff0afba071302fdbde62f5132125
+  ms-teams-notifier: wasikuss/ms-teams-notifier@dev:0939468ce339499ede3811addf081233a9c79d55
 
 jobs:
   build:
@@ -24,6 +24,8 @@ jobs:
             echo $WEBHOOK_URL
       - ms-teams-notifier/report:
           only_on_fail: true
+          show_msg: true
+          show_author: true
           webhook_url: $WEBHOOK_URL
 
 workflows:
