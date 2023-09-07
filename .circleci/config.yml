@@ -7,9 +7,9 @@ jobs:
   build:
     steps:
       - run:
-        name: Do something
-        command: |
-          echo 1
+          name: Do something
+          command: |
+            echo 1
       - ms-teams-notifier/report:
           only_on_fail: true
           webhook_url: $WEBHOOK_URL
